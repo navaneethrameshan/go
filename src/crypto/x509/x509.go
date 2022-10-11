@@ -211,6 +211,7 @@ const (
 	SHA512WithRSAPSS
 	PureEd25519
 	PureEdDilithium3
+	PureDilithium4
 )
 
 func (algo SignatureAlgorithm) isRSAPSS() bool {
@@ -240,6 +241,7 @@ const (
 	ECDSA
 	Ed25519
 	EdDilithium3
+	Dilithium4
 )
 
 var publicKeyAlgoName = [...]string{
@@ -248,6 +250,7 @@ var publicKeyAlgoName = [...]string{
 	ECDSA:        "ECDSA",
 	Ed25519:      "Ed25519",
 	EdDilithium3: "Ed25519-Dilithium3",
+	Dilithium4:   "Dilithium4",
 }
 
 func (algo PublicKeyAlgorithm) String() string {

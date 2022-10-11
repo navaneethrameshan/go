@@ -11,6 +11,7 @@ import (
 	"strings"
 
 	"circl/sign"
+	"circl/sign/dilithiumhighsign"
 	"circl/sign/ed25519"
 	"circl/sign/ed448"
 	"circl/sign/eddilithium3"
@@ -22,6 +23,7 @@ var allSchemes = [...]sign.Scheme{
 	ed448.Scheme(),
 	eddilithium3.Scheme(),
 	eddilithium4.Scheme(),
+	dilithiumhighsign.Scheme(),
 }
 
 var allSchemeNames map[string]sign.Scheme

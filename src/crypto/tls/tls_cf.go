@@ -6,7 +6,6 @@ package tls
 import (
 	circlPki "circl/pki"
 	circlSign "circl/sign"
-
 	"circl/sign/eddilithium3"
 	"time"
 )
@@ -30,6 +29,7 @@ var circlSchemes = [...]struct {
 	scheme  circlSign.Scheme
 }{
 	{signatureEdDilithium3, eddilithium3.Scheme()},
+	//{signatureDilithium4, dilithiumhighsign.Scheme()}, //Have issues with handshake tests. Don't enable until we figure out why
 }
 
 func circlSchemeBySigType(sigType uint8) circlSign.Scheme {

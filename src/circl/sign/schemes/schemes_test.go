@@ -117,4 +117,5 @@ func Example() {
 	// Ed448
 	// Ed25519-Dilithium3
 	// Ed448-Dilithium4
+	// Dilithium4
 }
