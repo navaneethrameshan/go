@@ -6,6 +6,7 @@
 //	Ed448
 //	Ed25519-Dilithium2
 //	Ed448-Dilithium3
+//  Dilithium5
 package schemes
 
 import (
@@ -16,6 +17,7 @@ import (
 	"github.com/cloudflare/circl/sign/ed448"
 	"github.com/cloudflare/circl/sign/eddilithium2"
 	"github.com/cloudflare/circl/sign/eddilithium3"
+	"github.com/cloudflare/circl/sign/dilithiumhighsign"
 )
 
 var allSchemes = [...]sign.Scheme{
@@ -23,7 +25,9 @@ var allSchemes = [...]sign.Scheme{
 	ed448.Scheme(),
 	eddilithium2.Scheme(),
 	eddilithium3.Scheme(),
+	dilithiumhighsign.Scheme(),
 }
+
 
 var allSchemeNames map[string]sign.Scheme
 
