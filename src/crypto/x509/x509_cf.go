@@ -3,6 +3,7 @@ package x509
 import (
 	circlPki "github.com/cloudflare/circl/pki"
 	circlSign "github.com/cloudflare/circl/sign"
+	"github.com/cloudflare/circl/sign/dilithiumhighsign"
 
 	"github.com/cloudflare/circl/sign/eddilithium3"
 
@@ -23,6 +24,7 @@ var circlSchemes = [...]struct {
 	scheme circlSign.Scheme
 }{
 	{PureEdDilithium3, EdDilithium3, eddilithium3.Scheme()},
+	{PureDilithium5, Dilithium5, dilithiumhighsign.Scheme()},
 }
 
 func CirclSchemeByPublicKeyAlgorithm(alg PublicKeyAlgorithm) circlSign.Scheme {
